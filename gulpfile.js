@@ -7,15 +7,22 @@ var gutil = require('gulp-util');
 var sourcemaps = require('gulp-sourcemaps');
 
 var paths = {
-    sass: 'development/sass/main.scss',
-    target: 'target',
-    targetCss: 'target/css'
+    html: './development/html/*',
+    sass: './development/sass/main.scss',
+    target: './target',
+    targetCss: './target/css'
 };
 
-gulp.task('clean', function () {
-  return del([
-    paths.target
-  ]);
+gulp.task('clean', function() {
+    return del([
+        paths.target
+    ]);
+});
+
+// copy html files to target folder
+gulp.task('html', function() {
+    gulp.src(paths.html)
+        .pipe(gulp.dest(paths.target));
 });
 
 gulp.task('sass', function() {
@@ -27,8 +34,8 @@ gulp.task('sass', function() {
             .on('error', gutil.log)
         ) // Log descriptive errors to the terminal
         .pipe(autoprefixer({
-          browsers: ['last 2 versions'],
-          cascade: false
+            browsers: ['last 2 versions'],
+            cascade: false
         }))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(paths.targetCss)); // The destination for the compiled file
@@ -37,6 +44,7 @@ gulp.task('sass', function() {
 // Task to watch for changes in our file sources
 gulp.task('watch', function() {
     gulp.watch(paths.sass, ['sass']); // If any changes in paths.sass, perform 'sass' task
+    gulp.watch(paths.html, ['html']);
 });
 
 // Define default task

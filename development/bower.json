@@ -1,0 +1,21 @@
+{
+  "name": "sg braunschweig redesign",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Matthias Britten"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "uikit": "^2.26.4"
+  }
+}
