@@ -8,6 +8,7 @@ var sourcemaps = require('gulp-sourcemaps');
 
 var paths = {
     html: './development/html/*',
+    font: './development/fonts/*',
     sass: './development/sass/main.scss',
     target: './target',
     targetCss: './target/css'
@@ -22,6 +23,12 @@ gulp.task('clean', function() {
 // copy html files to target folder
 gulp.task('html', function() {
     gulp.src(paths.html)
+        .pipe(gulp.dest(paths.target));
+});
+
+// copy font files to target folder
+gulp.task('font', function() {
+    gulp.src(paths.font)
         .pipe(gulp.dest(paths.target));
 });
 
@@ -45,7 +52,8 @@ gulp.task('sass', function() {
 gulp.task('watch', function() {
     gulp.watch(paths.sass, ['sass']); // If any changes in paths.sass, perform 'sass' task
     gulp.watch(paths.html, ['html']);
+    gulp.watch(paths.html, ['font']);
 });
 
 // Define default task
-gulp.task('default', ['sass']);
+gulp.task('default', ['sass', 'html', 'font']);
