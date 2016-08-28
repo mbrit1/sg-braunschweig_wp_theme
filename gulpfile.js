@@ -8,15 +8,17 @@ var sourcemaps = require('gulp-sourcemaps');
 
 var paths = {
     html: './development/html/*',
-    font: './development/fonts/*',
+    fontAwesome: './development/bower_components/uikit/fonts/*',
     sass: './development/sass/main.scss',
     target: './target',
-    targetCss: './target/css'
+    targetJsAssets: './target/assets/js',
+    targetCss: './target/css',
+    targetFont: './target/fonts'
 };
 
 gulp.task('clean', function() {
     return del([
-        paths.target
+        './target/**/**/*'
     ]);
 });
 
@@ -28,8 +30,19 @@ gulp.task('html', function() {
 
 // copy font files to target folder
 gulp.task('font', function() {
-    gulp.src(paths.font)
-        .pipe(gulp.dest(paths.target));
+  // font awesome
+    gulp.src(paths.fontAwesome)
+        .pipe(gulp.dest(paths.targetFont));
+});
+
+// copy js asset files to target folder
+gulp.task('js-assets', function() {
+  // jQuery
+    gulp.src('./development/bower_components/jquery/dist/jquery.min.js')
+        .pipe(gulp.dest(paths.targetJsAssets));
+  // uikit
+  gulp.src('./development/bower_components/uikit/js/uikit.min.js')
+      .pipe(gulp.dest(paths.targetJsAssets));
 });
 
 gulp.task('sass', function() {
@@ -56,4 +69,4 @@ gulp.task('watch', function() {
 });
 
 // Define default task
-gulp.task('default', ['sass', 'html', 'font']);
+gulp.task('default', ['sass', 'html', 'font', 'js-assets']);
