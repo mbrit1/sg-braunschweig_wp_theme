@@ -1,5 +1,29 @@
-$navbar-background: #fff;
+.sg-theme {
+    .uk-navbar {
+        background: #fff;
 
-.sgtheme {
-  
+        .uk-navbar-brand.uk-hidden-small {
+            height: 60px;
+            line-height: 60px;
+        }
+        // normal nav
+        .uk-navbar-nav {
+            li {
+                &.uk-active {
+                    border-bottom: 3px solid #F0C808;
+                }
+
+                a {
+                    height: 60px;
+                    line-height: 60px;
+                    font-size: 1.4rem;
+                    background-color: transparent;
+                }
+
+                &:hover {
+                    border-bottom: 3px solid #F0C808;
+                }
+            }
+        }
+    }
 }
