@@ -9,7 +9,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var paths = {
     html: './development/html/*',
     fontAwesome: './development/bower_components/uikit/fonts/*',
-    sass: './development/sass/main.scss',
+    sass: './development/sass/*',
     target: './target',
     targetJsAssets: './target/assets/js',
     targetCss: './target/css',
