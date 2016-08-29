@@ -9,7 +9,8 @@ var sourcemaps = require('gulp-sourcemaps');
 var paths = {
     html: './development/html/*',
     fontAwesome: './development/bower_components/uikit/fonts/*',
-    sass: './development/sass/*',
+    sassFolder: './development/sass/*',
+    sassMainFile: './development/sass/main.scss',
     target: './target',
     targetJsAssets: './target/assets/js',
     targetCss: './target/css',
@@ -46,7 +47,7 @@ gulp.task('js-assets', function() {
 });
 
 gulp.task('sass', function() {
-    gulp.src(paths.sass) // use main sass file source (paths.sass)
+    gulp.src(paths.sassMainFile) // use main sass file source (paths.sass)
         .pipe(sourcemaps.init())
         .pipe(sass({
                 outputStyle: 'compressed'
@@ -63,7 +64,7 @@ gulp.task('sass', function() {
 
 // Task to watch for changes in our file sources
 gulp.task('watch', function() {
-    gulp.watch(paths.sass, ['sass']); // If any changes in paths.sass, perform 'sass' task
+    gulp.watch(paths.sassFolder, ['sass']); // If any changes in paths.sass, perform 'sass' task
     gulp.watch(paths.html, ['html']);
     gulp.watch(paths.html, ['font']);
 });
