@@ -42,6 +42,8 @@ gulp.task('js-assets', function() {
     gulp.src('./development/bower_components/jquery/dist/jquery.min.js')
         .pipe(gulp.dest(paths.targetJsAssets));
   // uikit
+  gulp.src('./development/bower_components/uikit/js/components/slideshow.min.js')
+      .pipe(gulp.dest(paths.targetJsAssets));
   gulp.src('./development/bower_components/uikit/js/uikit.min.js')
       .pipe(gulp.dest(paths.targetJsAssets));
 });

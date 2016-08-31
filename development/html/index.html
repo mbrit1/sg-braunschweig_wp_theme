@@ -13,6 +13,7 @@
     <!-- link all the scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/uikit.min.js"></script>
+    <script src="assets/js/slideshow.min.js"></script>
 
     <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,42 +24,64 @@
 </head>
 
 <body class="sg-theme">
-    <!-- Navigation -->
-    <nav class="uk-navbar uk-navbar-attached">
-        <div class="uk-container uk-container-center">
-            <a href="#" class="uk-navbar-brand uk-padding-remove uk-hidden-small">Sg Braunschweig (tablet/desktop)</a>
-            <div class="uk-navbar-flip uk-hidden-small">
-                <ul class="uk-navbar-nav">
-                    <li class="uk-active"><a href="#">Neuigkeiten</a></li>
-                    <li><a href="#">Teams</a></li>
-                </ul>
-            </div>
-            <a href="" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas="{target:'#small-nav'}"></a>
-            <div class="uk-navbar-center uk-visible-small">
-                <a href="#" class="uk-navbar-brand">Sg Braunschweig (mobile)</a>
-            </div>
-            <div id="small-nav" class="uk-offcanvas">
-                <div class="uk-offcanvas-bar">
-                    <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav>
+    <div class="uk-container uk-container-center">
+        <!-- Navigation -->
+        <nav class="uk-navbar uk-navbar-attached">
+            <div class="uk-container uk-container-center">
+                <a href="#" class="uk-navbar-brand uk-padding-remove uk-hidden-small">Sg Braunschweig (tablet/desktop)</a>
+                <div class="uk-navbar-flip uk-hidden-small">
+                    <ul class="uk-navbar-nav">
                         <li class="uk-active"><a href="#">Neuigkeiten</a></li>
-                        <li class="uk-parent"><a href="#">Teams</a>
-                            <ul class="uk-nav-sub">
-                                <li><a href="#">u10</a></li>
-                                <li><a href="#">u12</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="#">Teams</a></li>
                     </ul>
                 </div>
+                <a href="" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas="{target:'#small-nav'}"></a>
+                <div class="uk-navbar-center uk-visible-small">
+                    <a href="#" class="uk-navbar-brand">Sg Braunschweig (mobile)</a>
+                </div>
+                <div id="small-nav" class="uk-offcanvas">
+                    <div class="uk-offcanvas-bar">
+                        <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav>
+                            <li class="uk-active"><a href="#">Neuigkeiten</a></li>
+                            <li class="uk-parent"><a href="#">Teams</a>
+                                <ul class="uk-nav-sub">
+                                    <li><a href="#">u10</a></li>
+                                    <li><a href="#">u12</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <!-- Content -->
-    <div class="main-content">
-        <div class="uk-container uk-container-center">
-            <div class="uk-grid">
+        <!-- Content -->
+        <div class="main-content uk-margin-large-top">
+            <div class="uk-grid uk-margin-large-top">
+                <!-- Sticky Posts -->
                 <div class="uk-width-1-1">
-                    mein inhalt
+                    <div class="sticky-posts uk-align-center">
+                        <ul class="uk-slideshow" data-uk-slideshow="{animation: 'swipe',autoplay:true}">
+                            <li>
+                                <img src="https://uikitplay.com/assets/img/placeholder_800x400_1.jpg">
+                                <div class="uk-overlay-panel uk-overlay-background uk-overlay-bottom">
+                                    <h2>Überschrift</h2>
+                                    <p>
+                                        Kurze Beschreibung
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="https://uikitplay.com/assets/img/placeholder_800x400_2.jpg">
+                                <div class="uk-overlay-panel uk-overlay-background uk-overlay-bottom">
+                                    <h2>Überschrift</h2>
+                                    <p>
+                                        Kurze Beschreibung
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
