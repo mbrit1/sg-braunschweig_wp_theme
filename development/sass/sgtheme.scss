@@ -1,34 +1,39 @@
 .sg-theme {
+    // navigation
     .uk-navbar {
         background: #fff;
 
-        .uk-navbar-brand.uk-hidden-small {
-            height: 60px;
-            line-height: 60px;
-        }
-        // normal nav
-        .uk-navbar-nav {
-            li {
-                &.uk-active {
-                    border-bottom: 3px solid #F0C808;
-                }
+        .nav-large-wrapper {
+            .uk-navbar-brand {
+                height: 60px;
+                line-height: 60px;
+            }
 
-                a {
-                    height: 60px;
-                    line-height: 60px;
-                    font-size: 1.4rem;
-                    background-color: transparent;
-                }
+            .uk-navbar-nav {
+                li {
+                    &.uk-active {
+                        border-bottom: 3px solid #F0C808;
+                    }
 
-                &:hover {
-                    border-bottom: 3px solid #F0C808;
+                    a {
+                        height: 60px;
+                        line-height: 60px;
+                        font-size: 1.4rem;
+                        background-color: transparent;
+                    }
+
+                    &:hover {
+                        border-bottom: 3px solid #F0C808;
+                    }
                 }
             }
         }
     }
+
+    // main content
     .main-content {
-      .sticky-posts {
-        max-width: 800px;
-      }
+        .sticky-posts {
+            max-width: 1000px;
+        }
     }
 }
