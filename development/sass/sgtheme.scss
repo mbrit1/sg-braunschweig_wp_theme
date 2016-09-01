@@ -1,7 +1,8 @@
 .sg-theme {
+  background-color: $color-light-blue;
     // navigation
     .uk-navbar {
-        background: #fff;
+        background: $color-white;
 
         .nav-large-wrapper {
             .uk-navbar-brand {
@@ -12,7 +13,7 @@
             .uk-navbar-nav {
                 li {
                     &.uk-active {
-                        border-bottom: 3px solid #F0C808;
+                        border-bottom: 3px solid $color-yellow; //#F0C808
                     }
 
                     a {
@@ -23,7 +24,7 @@
                     }
 
                     &:hover {
-                        border-bottom: 3px solid #F0C808;
+                        border-bottom: 3px solid $color-yellow;
                     }
                 }
             }
@@ -35,5 +36,16 @@
         .sticky-posts {
             max-width: 1000px;
         }
+    }
+
+    .new-member-ad {
+      height: 200px;
+      background-image: url('../images/new_member_ad.jpeg');
+    }
+
+    // footer
+    footer {
+      background-color: $color-dark-blue;
+      color: $color-white;
     }
 }
