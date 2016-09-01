@@ -8,13 +8,15 @@ var sourcemaps = require('gulp-sourcemaps');
 
 var paths = {
     html: './development/html/*',
+    images: './development/images/*',
     fontAwesome: './development/bower_components/uikit/fonts/*',
     sassFolder: './development/sass/*',
     sassMainFile: './development/sass/main.scss',
     target: './target',
     targetJsAssets: './target/assets/js',
     targetCss: './target/css',
-    targetFont: './target/fonts'
+    targetFont: './target/fonts',
+    targetImages: './target/images'
 };
 
 gulp.task('clean', function() {
@@ -36,6 +38,13 @@ gulp.task('font', function() {
         .pipe(gulp.dest(paths.targetFont));
 });
 
+// copy image files to target folder
+gulp.task('images', function() {
+  // font awesome
+    gulp.src(paths.images)
+        .pipe(gulp.dest(paths.targetImages));
+});
+
 // copy js asset files to target folder
 gulp.task('js-assets', function() {
   // jQuery
@@ -43,6 +52,8 @@ gulp.task('js-assets', function() {
         .pipe(gulp.dest(paths.targetJsAssets));
   // uikit
   gulp.src('./development/bower_components/uikit/js/components/slideshow.min.js')
+      .pipe(gulp.dest(paths.targetJsAssets));
+  gulp.src('./development/bower_components/uikit/js/components/parallax.min.js')
       .pipe(gulp.dest(paths.targetJsAssets));
   gulp.src('./development/bower_components/uikit/js/uikit.min.js')
       .pipe(gulp.dest(paths.targetJsAssets));
@@ -72,4 +83,4 @@ gulp.task('watch', function() {
 });
 
 // Define default task
-gulp.task('default', ['sass', 'html', 'font', 'js-assets']);
+gulp.task('default', ['sass', 'html', 'font', 'js-assets', 'images']);
