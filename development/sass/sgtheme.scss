@@ -1,8 +1,11 @@
 .sg-theme {
-  background-color: $color-light-blue;
+    background-color: $color-grey;
     // navigation
     .uk-navbar {
         background: $color-white;
+        @media (min-width: $breakpoint-small) {
+            padding-bottom: 10px;
+        }
 
         .nav-large-wrapper {
             .uk-navbar-brand {
@@ -30,22 +33,72 @@
             }
         }
     }
-
     // main content
-    .main-content {
-        .sticky-posts {
-            max-width: 1000px;
+    .sticky-posts {
+      @media (max-width: $breakpoint-large) {
+        padding-top: 0;
+      }
+      @media (max-width: $breakpoint-small-max) {
+        .uk-slideshow {
+          height: 300px !important;
+          li {
+            height: 300px !important;
+          }
+        }
+      }
+      @media (min-width: $breakpoint-small-max) and (max-width: $breakpoint-medium-max) {
+        .uk-slideshow {
+          height: 400px !important;
+          li {
+            height: 400px !important;
+          }
+        }
+      }
+      @media (min-width: $breakpoint-large) {
+        .uk-slideshow {
+          height: 500px !important;
+          li {
+            height: 500px !important;
+          }
+        }
+      }
+    }
+    .new-member-ad {
+        height: 200px;
+        background-image: url('../images/new_member_ad.jpeg');
+
+        .call-to-action-button {
+            display: inline-block;
+            @media (max-width: $breakpoint-small-max) {
+                margin-top: 25px;
+            }
         }
     }
-
-    .new-member-ad {
-      height: 200px;
-      background-image: url('../images/new_member_ad.jpeg');
-    }
-
     // footer
     footer {
-      background-color: $color-dark-blue;
-      color: $color-white;
+        background-color: $color-dark-blue;
+        .partner-images {
+          img {
+            max-height: 50px;
+            @media (min-width: $breakpoint-small-max) {
+              max-height: 70px;
+            }
+          }
+        }
     }
+}
+
+.call-to-action-button {
+    color: $color-white;
+    padding: 10px;
+    border: 3px solid $color-white;
+
+    &:hover {
+        border-color: $color-yellow;
+        color: $color-white;
+        text-decoration: none;
+    }
+}
+.text-muted {
+  color: $text-muted-color;
 }
