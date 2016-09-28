@@ -97,10 +97,36 @@
             }
         }
     }
+    // team cards
+    .team-cards {
+      .card {
+        margin-bottom: 50px;
+
+        .uk-panel {
+          background-color: $color-white;
+          -webkit-box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.1);
+          -moz-box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.1);
+          box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.1);
+
+          .card-body {
+            padding: 0px 20px;
+          }
+        }
+      }
+    }
     // footer
     footer {
         background-color: $color-dark-blue;
-        
+
+        .footer-navigation {
+          ul:first-of-type {
+            padding-top: 10px;
+          }
+          ul {
+            padding-left: 0px;
+          }
+
+        }
         .footer-headline {
           border-bottom: 2px solid $color-yellow;
           display: initial;

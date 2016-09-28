@@ -13,8 +13,6 @@
     <!-- link all the scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/uikit.min.js"></script>
-    <script src="assets/js/slideshow.min.js"></script>
-    <script src="assets/js/parallax.min.js"></script>
 
     <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -25,97 +23,238 @@
 </head>
 
 <body class="sg-theme">
-  <!-- Navigation -->
-  <nav class="uk-navbar uk-navbar-attached">
-      <div class="nav-large-wrapper uk-hidden-small">
-          <a href="#" class="uk-navbar-brand"><img src="images/basketball.png"  />SG Braunschweig (tablet/desktop)</a>
-          <div class="uk-navbar-flip uk-margin-large-right">
-              <ul class="uk-navbar-nav">
-                  <li><a href="index.html">Neuigkeiten</a></li>
-                  <li class="uk-active"><a href="#">Teams</a></li>
-              </ul>
-          </div>
-      </div>
-      <div class="nav-small-wrapper uk-visible-small">
-          <a href="" class="uk-navbar-toggle " data-uk-offcanvas="{target:'#small-nav'}"></a>
-          <div class="uk-navbar-center">
-              <a href="#" class="uk-navbar-brand"><img src="images/basketball.png"  />Sg Braunschweig (mobile)</a>
-          </div>
-          <div id="small-nav" class="uk-offcanvas">
-              <div class="uk-offcanvas-bar">
-                  <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav>
-                      <li class="uk-parent"><a href="index.html">Neuigkeiten</a></li>
-                      <li class="uk-active"><a href="#">Teams</a>
-                          <ul class="uk-nav-sub">
-                              <li><a href="#">u10</a></li>
-                              <li><a href="#">u12</a></li>
-                          </ul>
-                      </li>
-                  </ul>
-              </div>
-          </div>
-      </div>
-  </nav>
-
-  <!-- Content -->
-  <div class="team-introduction uk-block">
-    <div class="uk-grid">
-      <div class="uk-width-9-10 uk-width-large-7-10 uk-container-center">
-        <h1>Unsere Teams</h1>
-        <p>
-          Hier stellen sich unsere Teams vor.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <div class="team-cards">
-    <div class="uk-grid">
-      <div class="uk-width-9-10 uk-width-large-7-10 uk-container-center">
-        <div class="uk-grid">
-          <div class="uk-grid-width-small-1-2 uk-grid-width-medium-1-3 uk-grid-width-large-1-4">
-            <div class="card">
-              <div class="uk-panel uk-panel-box">
-                <div class="uk-panel-teaser uk-cover-background">
-                    <img class="uk-invisible" src="images/team1.jpeg" alt="">
-                </div>
-                <h3 class="uk-panel-title">1. Herren</h3>
+    <!-- Navigation -->
+    <nav class="uk-navbar uk-navbar-attached">
+        <div class="nav-large-wrapper uk-hidden-small">
+            <a href="#" class="uk-navbar-brand"><img src="images/basketball.png" />SG Braunschweig (tablet/desktop)</a>
+            <div class="uk-navbar-flip uk-margin-large-right">
+                <ul class="uk-navbar-nav">
+                    <li><a href="index.html">Neuigkeiten</a></li>
+                    <li class="uk-active"><a href="#">Teams</a></li>
+                </ul>
             </div>
-            </div>
-          </div>
         </div>
-      </div>
+        <div class="nav-small-wrapper uk-visible-small">
+            <a href="" class="uk-navbar-toggle " data-uk-offcanvas="{target:'#small-nav'}"></a>
+            <div class="uk-navbar-center">
+                <a href="#" class="uk-navbar-brand"><img src="images/basketball.png" />Sg Braunschweig (mobile)</a>
+            </div>
+            <div id="small-nav" class="uk-offcanvas">
+                <div class="uk-offcanvas-bar">
+                    <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav>
+                        <li class="uk-parent"><a href="index.html">Neuigkeiten</a></li>
+                        <li class="uk-active"><a href="#">Teams</a>
+                            <ul class="uk-nav-sub">
+                                <li><a href="#">u10</a></li>
+                                <li><a href="#">u12</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="team-introduction uk-block">
+        <div class="uk-grid">
+            <div class="uk-width-9-10 uk-width-large-7-10 uk-container-center">
+                <h1>Unsere Teams</h1>
+                <p>
+                    Hier stellen sich unsere Teams vor.
+                </p>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <!-- Footer -->
-  <footer class="uk-block text-muted">
-      <div class="uk-grid">
-          <div class="uk-width-9-10 uk-width-large-7-10 uk-container-center">
-              <ul class="uk-grid uk-grid-width-large-1-3">
-                  <li>
+    <div class="team-cards">
+        <div class="uk-grid">
+            <div class="uk-width-9-10 uk-width-large-7-10 uk-container-center">
+                <div class="uk-grid uk-grid-width-small-1-2 uk-grid-width-medium-1-3">
+                    <div class="card">
+                        <div class="uk-panel">
+                            <div class="uk-panel-teaser uk-cover-background">
+                                <img src="images/team1.jpeg" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="uk-panel-title">1. Herren</h3>
+                                <p>
+                                    Trainer: Max Mustermann
+                                </p>
+                                <p>
+                                    Trainingszeiten:
+                                    <li>
+                                        <ul>
+                                            Mo 20-22 Uhr
+                                        </ul>
+                                        <ul>
+                                            Mi 19 - 21 Uhr
+                                        </ul>
+                                    </li>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="uk-panel">
+                            <div class="uk-panel-teaser uk-cover-background">
+                                <img src="images/team2.jpeg" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="uk-panel-title">1. Damen</h3>
+                                <p>
+                                    Trainer: Max Mustermann
+                                </p>
+                                <p>
+                                    Trainingszeiten:
+                                    <li>
+                                        <ul>
+                                            Mo 20-22 Uhr
+                                        </ul>
+                                        <ul>
+                                            Mi 19 - 21 Uhr
+                                        </ul>
+                                    </li>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="uk-panel">
+                            <div class="uk-panel-teaser uk-cover-background">
+                                <img src="images/team3.jpeg" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="uk-panel-title">u20</h3>
+                                <p>
+                                    Trainer: Max Mustermann
+                                </p>
+                                <p>
+                                    Trainingszeiten:
+                                    <li>
+                                        <ul>
+                                            Mo 20-22 Uhr
+                                        </ul>
+                                        <ul>
+                                            Mi 19 - 21 Uhr
+                                        </ul>
+                                    </li>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="uk-panel">
+                            <div class="uk-panel-teaser uk-cover-background">
+                                <img src="images/team4.jpeg" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="uk-panel-title">u18</h3>
+                                <p>
+                                    Trainer: Max Mustermann
+                                </p>
+                                <p>
+                                    Trainingszeiten:
+                                    <li>
+                                        <ul>
+                                            Mo 20-22 Uhr
+                                        </ul>
+                                        <ul>
+                                            Mi 19 - 21 Uhr
+                                        </ul>
+                                    </li>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="uk-panel">
+                            <div class="uk-panel-teaser uk-cover-background">
+                                <img src="images/team5.jpeg" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="uk-panel-title">u16</h3>
+                                <p>
+                                    Trainer: Max Mustermann
+                                </p>
+                                <p>
+                                    Trainingszeiten:
+                                    <li>
+                                        <ul>
+                                            Mo 20-22 Uhr
+                                        </ul>
+                                        <ul>
+                                            Mi 19 - 21 Uhr
+                                        </ul>
+                                    </li>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="uk-panel">
+                            <div class="uk-panel-teaser uk-cover-background">
+                                <img src="images/team6.jpeg" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="uk-panel-title">u14</h3>
+                                <p>
+                                    Trainer: Max Mustermann
+                                </p>
+                                <p>
+                                    Trainingszeiten:
+                                    <li>
+                                        <ul>
+                                            Mo 20-22 Uhr
+                                        </ul>
+                                        <ul>
+                                            Mi 19 - 21 Uhr
+                                        </ul>
+                                    </li>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="uk-block text-muted">
+        <div class="uk-grid">
+            <div class="uk-width-9-10 uk-width-large-7-10 uk-container-center">
+                <ul class="uk-grid uk-grid-width-large-1-3">
+                    <li>
+                        <div class="uk-text-large footer-headline">
+                            Unsere Partner
+                        </div>
+                        <div class="partner-images">
+                            <img src="images/loewen.png" />
+                            <img src="images/bbl.png" />
+                        </div>
+                    </li>
+                    <li>
+                        <div class="uk-text-large footer-headline">
+                            la la la
+                        </div>
+                    </li>
+                    <li class="footer-navigation">
                       <div class="uk-text-large footer-headline">
-                          Unsere Partner
+                          Navigation
                       </div>
-                      <div class="partner-images">
-                          <img src="images/loewen.png" />
-                          <img src="images/bbl.png" />
-                      </div>
-                  </li>
-                  <li>
-                    <div class="uk-text-large footer-headline">
-                        la la la
-                    </div>
-                  </li>
-                  <li>
-                    <div class="uk-text-large footer-headline">
-                        und so weiter
-                    </div>
-                  </li>
-              </ul>
-          </div>
-      </div>
+                      <ul>
+                        <a href="#">Neuigkeiten</a>
+                      </ul>
+                      <ul>
+                        <a href="teams.html">Teams</a>
+                      </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-  </footer>
+    </footer>
 </body>
+
 </html>
