@@ -8,3 +8,6 @@ create a new design for the [SG Braunschweig](www.sg-braunschweig.de) website.
 ## Usage
 * run `gulp` in the main directory to create the compiled files in the target directory
 * use `gulp watch` to output every change of **HTML** or **CSS** to the target directory.
+
+## Tutorials
+* https://www.taniarascia.com/developing-a-wordpress-theme-from-scratch/
