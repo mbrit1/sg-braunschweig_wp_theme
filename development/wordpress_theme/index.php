@@ -27,9 +27,23 @@
         </div>
       </div>
     </div>
-
-    <?php get_template_part( 'content', get_post_format() ); ?>
-
+    <!-- blog posts -->
+    <div class="sg-articles uk-block uk-text-justify">
+      <div class="uk-grid">
+        <div class="uk-width-9-10 uk-width-large-6-10 uk-container-center">
+          <?php
+            if (have_posts()) : while (have_posts()) : the_post();
+              get_template_part('content', get_post_format());
+            endwhile; ?>
+              <div class="article-pagination uk-margin-large-top">
+                <li class="uk-pagination-previous"><?php previous_posts_link(); ?></li>
+                <li class="uk-pagination-next"><?php next_posts_link(); ?></li>
+              </div>
+            <?php endif;
+          ?>
+        </div>
+      </div>
+    </div>
     <!-- new member action -->
     <div class="new-member-ad uk-vertical-align uk-text-center" data-uk-parallax="{bg: '-200'}">
         <div class="uk-vertical-align-middle">
