@@ -49,16 +49,17 @@
         .nav-small-wrapper {
           display: flex;
           align-items: center;
+          .uk-navbar-center {
+            max-width: inherit;
+            .uk-navbar-brand {
+              height: 60px;
 
-          .uk-navbar-brand {
-            height: 60px;
-            
-            img {
-                height: 40px;
-                margin-right: 10px;
+              img {
+                  height: 40px;
+                  margin-right: 10px;
+              }
             }
           }
-
         }
     }
     // main content
