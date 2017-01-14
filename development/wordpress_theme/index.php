@@ -1,32 +1,31 @@
 <?php get_header(); ?>
     <!-- Content -->
-    <!-- Sticky Posts -->
-    <div class="sticky-posts uk-block">
-      <div class="uk-grid">
-        <div class="uk-width-large-6-10 uk-container-center">
-          <ul class="uk-slideshow" data-uk-slideshow="{animation: 'swipe',autoplay:true,autoplayInterval:10000}">
-              <li>
-                  <img src="images/sticky1.jpeg">
+    <?php $get_important_posts = new WP_Query('cat=4&post_count=5');
+      if ($get_important_posts->have_posts()) : ?>
+      <!-- Sticky Posts -->
+      <div class="sticky-posts uk-block">
+        <div class="uk-grid">
+          <div class="uk-width-large-6-10 uk-container-center">
+            <ul class="uk-slideshow" data-uk-slideshow="{animation: 'swipe',autoplay:true,autoplayInterval:10000}">
+              <?php while ( $get_important_posts->have_posts() ) : $get_important_posts->the_post(); ?>
+                <li>
+                  <?php if (has_post_thumbnail()) {?>
+                    <img src="<?php the_post_thumbnail_url('large'); ?>">
+                  <?php } else { ?>
+                    <img src="<?php bloginfo('template_directory');?>/images/sticky1.jpeg">
+                  <?php } ?>
                   <div class="uk-overlay-panel uk-overlay-background uk-overlay-bottom">
-                      <h2>Artikel</h2>
-                      <p>
-                          Kurze Beschreibung <a class="uk-link" href="">mehr lesen</a>
-                      </p>
+                      <h2><?php the_title(); ?></h2>
+                      <?php the_excerpt(); ?>
+                      <a class="uk-link" href="<?php echo get_permalink(); ?>">mehr lesen</a>
                   </div>
-              </li>
-              <li>
-                  <img src="images/sticky2.jpg">
-                  <div class="uk-overlay-panel uk-overlay-background uk-overlay-bottom">
-                      <h2>Artikel</h2>
-                      <p>
-                          Kurze Beschreibung <a class="uk-link" href="">mehr lesen</a>
-                      </p>
-                  </div>
-              </li>
-          </ul>
+                </li>
+            	<?php endwhile; ?>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
+    <?php endif; ?>
     <!-- blog posts -->
     <div class="sg-articles uk-block uk-text-justify">
       <div class="uk-grid">

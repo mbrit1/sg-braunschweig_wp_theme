@@ -28,7 +28,7 @@
 
             .uk-navbar-nav {
                 li {
-                    &.uk-active {
+                    &.current-menu-item {
                         border-bottom: 3px solid $color-yellow; //#F0C808
                     }
 

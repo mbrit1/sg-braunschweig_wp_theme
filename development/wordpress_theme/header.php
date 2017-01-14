@@ -22,10 +22,8 @@
         <div class="nav-large-wrapper uk-hidden-small">
             <a href="<?php bloginfo( 'wpurl' );?>" class="uk-navbar-brand"><img src="<?php bloginfo('template_directory');?>/images/sg_logo.jpg"  /><?php echo get_bloginfo( 'name' ); ?></a>
             <div class="uk-navbar-flip uk-margin-large-right navbar-menu">
-                <ul class="uk-navbar-nav">
-                    <li class="uk-active"><a href="#">Neuigkeiten</a></li>
-                    <?php wp_list_pages( '&title_li=' ); ?>
-                </ul>
+
+                    <?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'menu_class' => 'uk-navbar-nav', 'container'=> '', ) ); ?>
             </div>
         </div>
         <!-- phone display navigation -->
