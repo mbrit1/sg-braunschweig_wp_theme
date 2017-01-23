@@ -48,7 +48,7 @@
         <div class="uk-vertical-align-middle">
             <div class="uk-h2 uk-text-contrast">
                 <span>Du willst Mitglied werden?</span>
-                <span><a class="call-to-action-button" href="#">So geht's</a></span>
+                <span><a class="call-to-action-button uk-animation-reverse uk-animation-hover uk-animation-scale" href="<?php echo get_page_link(31); ?>">So geht's</a></span>
             </div>
         </div>
     </div>
