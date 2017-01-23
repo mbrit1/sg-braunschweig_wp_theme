@@ -21,9 +21,9 @@
             }
 
             .navbar-menu {
-              height: 100px;
-              display: flex;
-              align-items: center;
+                height: 100px;
+                display: flex;
+                align-items: center;
             }
 
             .uk-navbar-nav {
@@ -47,19 +47,33 @@
         }
 
         .nav-small-wrapper {
-          display: flex;
-          align-items: center;
-          .uk-navbar-center {
-            max-width: inherit;
-            .uk-navbar-brand {
-              height: 60px;
+            display: flex;
+            align-items: center;
 
-              img {
-                  height: 40px;
-                  margin-right: 10px;
-              }
+            .uk-navbar-center {
+                max-width: inherit;
+
+                .uk-navbar-brand {
+                    height: 60px;
+
+                    img {
+                        height: 40px;
+                        margin-right: 10px;
+                    }
+                }
             }
-          }
+            .uk-nav-header {
+                margin-top: 0;
+                border-top: 1px solid rgba(0,0,0,.3);
+                background: #404040;
+                box-shadow: inset 0 1px 0 rgba(255,255,255,.05);
+                text-shadow: 0 1px 0 rgba(0,0,0,.5);
+            }
+            .current-menu-item.current_page_item {
+              background: #1a1a1a;
+              color: #fff;
+              box-shadow: inset 0 1px 3px rgba(0,0,0,.3);
+            }
         }
     }
     // main content

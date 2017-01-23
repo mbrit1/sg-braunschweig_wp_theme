@@ -20,25 +20,26 @@
     <nav class="uk-navbar uk-navbar-attached">
         <!-- medium/large display navigation -->
         <div class="nav-large-wrapper uk-hidden-small">
-            <a href="<?php bloginfo( 'wpurl' );?>" class="uk-navbar-brand"><img src="<?php bloginfo('template_directory');?>/images/sg_logo.jpg"  /><?php echo get_bloginfo( 'name' ); ?></a>
+            <a href="<?php bloginfo('wpurl');?>" class="uk-navbar-brand"><img src="<?php bloginfo('template_directory');?>/images/sg_logo.jpg"  /><?php echo get_bloginfo('name'); ?></a>
             <div class="uk-navbar-flip uk-margin-large-right navbar-menu">
-
-                    <?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'menu_class' => 'uk-navbar-nav', 'container'=> '', ) ); ?>
+                <?php wp_nav_menu(array( 'theme_location' => 'header-menu', 'menu_class' => 'uk-navbar-nav', 'container'=> '', )); ?>
             </div>
         </div>
         <!-- phone display navigation -->
         <div class="nav-small-wrapper uk-visible-small">
             <a href="" class="uk-navbar-toggle " data-uk-offcanvas="{target:'#small-nav'}"></a>
             <div class="uk-navbar-center">
-                <a href="<?php bloginfo( 'wpurl' );?>" class="uk-navbar-brand"><img src="<?php bloginfo('template_directory');?>/images/sg_logo.jpg"  /><?php echo get_bloginfo( 'name' ); ?></a>
+                <a href="<?php bloginfo('wpurl');?>" class="uk-navbar-brand"><img src="<?php bloginfo('template_directory');?>/images/sg_logo.jpg"  /><?php echo get_bloginfo('name'); ?></a>
             </div>
             <div id="small-nav" class="uk-offcanvas">
-                <div class="uk-offcanvas-bar">
-                    <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav>
-                        <li class="uk-active"><a href="#">Neuigkeiten</a></li>
-                        <?php wp_list_pages( '&title_li=' ); ?>
-                    </ul>
-                </div>
+              <div class="uk-offcanvas-bar">
+                <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav>
+                  <li class="uk-nav-header">
+                    Navigation
+                  </li>
+                  <?php wp_nav_menu(array( 'theme_location' => 'header-menu', 'menu_class' => '', 'container'=> '', 'items_wrap' => '%3$s' )); ?>
+                </ul>
+              </div>
             </div>
         </div>
     </nav>
