@@ -55,6 +55,8 @@ gulp.task('js-assets', function() {
       .pipe(gulp.dest(paths.targetJsAssets));
   gulp.src('./development/bower_components/uikit/js/components/parallax.min.js')
       .pipe(gulp.dest(paths.targetJsAssets));
+  gulp.src('./development/bower_components/uikit/js/components/grid.min.js')
+      .pipe(gulp.dest(paths.targetJsAssets));
   gulp.src('./development/bower_components/uikit/js/uikit.min.js')
       .pipe(gulp.dest(paths.targetJsAssets));
 });
