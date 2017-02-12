@@ -20,7 +20,7 @@
     <nav class="uk-navbar uk-navbar-attached">
         <!-- medium/large display navigation -->
         <div class="nav-large-wrapper uk-hidden-small">
-            <a href="<?php bloginfo('wpurl');?>" class="uk-navbar-brand"><img src="<?php bloginfo('template_directory');?>/images/sg_logo_small.png"  /><?php echo get_bloginfo('name'); ?></a>
+            <a href="<?php bloginfo('wpurl');?>" class="uk-navbar-brand uk-text-break"><img src="<?php bloginfo('template_directory');?>/images/sg_logo_small.png"  /><?php echo get_bloginfo('name'); ?></a>
             <div class="uk-navbar-flip uk-margin-large-right navbar-menu">
                 <?php wp_nav_menu(array( 'theme_location' => 'header-menu', 'menu_class' => 'uk-navbar-nav', 'container'=> '', )); ?>
             </div>

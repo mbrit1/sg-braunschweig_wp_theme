@@ -14,6 +14,7 @@
                 display: flex;
                 align-items: center;
                 margin-left: 25px;
+                max-width: 40%;
 
                 img {
                     height: 99px;
@@ -56,6 +57,7 @@
 
                 .uk-navbar-brand {
                     height: 60px;
+                    font-size: 14px;
 
                     img {
                         height: 50px;
@@ -177,6 +179,20 @@
                 }
             }
         }
+    }
+    // Mitglied werden
+    .club-membership {
+      .ft-braunschweig {
+        padding: 10px;
+        border: 20px solid $color-ft-bs;
+      }
+      .mtv-braunschweig {
+        @media screen and (max-width: $breakpoint-medium) {
+          margin-top: 40px;
+        }
+        padding: 10px;
+        border: 20px solid $color-mtv-bs;
+      }
     }
     // footer
     footer {
