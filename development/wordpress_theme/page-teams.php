@@ -35,10 +35,10 @@
       	}
       ?>
     </div>
-    <h2 class="uk-margin-top-large">Schulmannschaften</h2>
+    <h2 class="uk-margin-top-large">Jugendmannschaften</h2>
     <div class="uk-grid-width-small-1-1 uk-grid-width-medium-1-2" data-uk-grid="{gutter: 20, animation: false}">
       <?php
-      	$mypages = get_pages( array( 'parent' => 151, 'sort_column' => 'post_title') );
+      	$mypages = get_pages( array( 'parent' => 154, 'sort_column' => 'post_title') );
       	foreach( $mypages as $page ) {
           $content = $page->post_content;
           if (! $content) {
@@ -67,10 +67,10 @@
       	}
       ?>
     </div>
-    <h2 class="uk-margin-top-large">Jugendmannschaften</h2>
+    <h2 class="uk-margin-top-large">Schulmannschaften</h2>
     <div class="uk-grid-width-small-1-1 uk-grid-width-medium-1-2" data-uk-grid="{gutter: 20, animation: false}">
       <?php
-      	$mypages = get_pages( array( 'parent' => 154, 'sort_column' => 'post_title') );
+      	$mypages = get_pages( array( 'parent' => 151, 'sort_column' => 'post_title') );
       	foreach( $mypages as $page ) {
           $content = $page->post_content;
           if (! $content) {
