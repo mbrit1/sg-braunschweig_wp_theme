@@ -17,25 +17,49 @@
       ?>
       <!-- die Hauptvereine -->
       <div class="uk-grid uk-margin-large-top club-membership">
-      <?php
-      	$mypages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'post_title') );
-      	foreach( $mypages as $page ) {
-          $content = $page->post_content;
-          if (! $content) {
-            continue;
-          }
-      ?>
         <div class="uk-width-medium-1-2 uk-width-small-1-1">
-          <div class="<?php echo strtolower(str_replace(" ", "-", $page->post_title)); ?>">
-            <h2>
-              <?php echo $page->post_title; ?>
-            </h2>
+          <div class="ft-braunschweig">
+            <div class="header uk-margin-bottom uk-clearfix">
+              <?php
+                $ftBraunschweig = get_post(128);
+
+                if (has_post_thumbnail($ftBraunschweig->ID)) {
+                  echo get_the_post_thumbnail( $ftBraunschweig->ID, 'medium' );
+                }
+              ?>
+              <h2>
+                <?php echo $ftBraunschweig->post_title; ?>
+              </h2>
+            </div>
             <div>
-              <?php echo $content; ?>
+              <?php echo apply_filters('the_content', $ftBraunschweig->post_content); ?>
             </div>
           </div>
         </div>
-      <?php } ?>
+        <div class="uk-width-medium-1-2 uk-width-small-1-1">
+          <div class="mtv-braunschweig">
+            <?php
+              $mtvBraunschweig = get_post(130);
+
+              if (has_post_thumbnail($mtvBraunschweig->ID)) {
+                echo get_the_post_thumbnail( $mtvBraunschweig->ID, 'medium' );
+              }
+            ?>
+            <div class="uk-margin-top">
+              <?php echo apply_filters('the_content', $mtvBraunschweig->post_content); ?>
+            </div>
+          </div>
+        </div>
+        <div class="uk-width-1-1">
+          <div class="sg-braunschweig uk-margin-large-top">
+            <?php
+              $sgBraunschweig = get_post(209);
+            ?>
+            <div>
+              <?php echo apply_filters('the_content', $sgBraunschweig->post_content); ?>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

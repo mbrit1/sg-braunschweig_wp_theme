@@ -191,6 +191,13 @@
       .ft-braunschweig {
         padding: 10px;
         border: 20px solid $color-ft-bs;
+        .header {
+          img {
+            width: 70px;
+            float: left;
+            margin-right: 10px;
+          }
+        }
       }
       .mtv-braunschweig {
         @media screen and (max-width: $breakpoint-medium) {
@@ -198,6 +205,10 @@
         }
         padding: 10px;
         border: 20px solid $color-mtv-bs;
+      }
+      .sg-braunschweig {
+        padding: 10px;
+        border: 20px solid $color-yellow;
       }
     }
     // kontaktformular
