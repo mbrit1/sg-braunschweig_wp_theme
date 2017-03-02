@@ -18,7 +18,7 @@
       <!-- die Hauptvereine -->
       <div class="uk-grid uk-margin-large-top club-membership" data-uk-grid-match="{target:'.uk-panel'}">
         <div class="uk-width-medium-1-2 uk-width-small-1-1">
-          <div class="ft-braunschweig uk-panel">
+          <div class="ft-braunschweig uk-panel uk-text-left">
             <div class="header uk-margin-bottom uk-clearfix">
               <?php
                 $ftBraunschweig = get_post(128);
@@ -37,12 +37,12 @@
           </div>
         </div>
         <div class="uk-width-medium-1-2 uk-width-small-1-1">
-          <div class="mtv-braunschweig uk-panel">
+          <div class="mtv-braunschweig uk-panel uk-text-left">
             <?php
               $mtvBraunschweig = get_post(130);
 
               if (has_post_thumbnail($mtvBraunschweig->ID)) {
-                echo get_the_post_thumbnail( $mtvBraunschweig->ID, 'medium' );
+                echo get_the_post_thumbnail( $mtvBraunschweig->ID, 'large' );
               }
             ?>
             <div class="uk-margin-top">
