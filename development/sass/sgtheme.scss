@@ -1,10 +1,16 @@
 .sg-theme {
     background-color: $color-grey;
+    font-family: 'Open Sans', sans-serif;
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Graduate', cursive;
+      text-align: left;
+    }
     // navigation
     .uk-navbar {
         background: $color-white;
         @media (min-width: $breakpoint-medium) {
-            padding-bottom: 10px;
+            padding: 5px 10px;
             box-shadow: 0 6px 6px -6px lightgrey;
         }
 
@@ -15,12 +21,10 @@
                 align-items: center;
                 margin-left: 25px;
                 max-width: 40%;
-                @media (max-width: $breakpoint-medium-max) {
-                    max-width: 29%;
-                }
+                font-family: 'Graduate', cursive;
 
                 img {
-                    height: 99px;
+                    height: 84px;
                     margin-right: 15px;
                     @media (max-width: $breakpoint-medium-max) {
                         height: 73px;
@@ -30,14 +34,33 @@
 
             .navbar-menu {
                 height: 100px;
-                display: flex;
-                align-items: center;
+
+                @media (max-width: $breakpoint-medium-max) {
+                      max-width: 370px;
+                }
+                @media (min-width: $breakpoint-medium-max) and (max-width: 1230px) {
+                      max-width: 515px;
+                }
+                @media (min-width: $breakpoint-medium-max) {
+                  display: flex;
+                  align-items: center;
+                }
             }
 
             .uk-navbar-nav {
+                @media (max-width: 1230px) {
+                  display: flex;
+                  flex-wrap: wrap;
+                  width: 100%;
+                  justify-content: flex-end;
+                  align-items: center;
+                }
+
                 li {
                     &.current-menu-item {
-                        border-bottom: 3px solid $color-yellow; //#F0C808
+                        a {
+                          border-bottom: 3px solid $color-yellow;
+                        }
                     }
 
                     a {
@@ -45,11 +68,16 @@
                         line-height: 60px;
                         font-size: 1.4rem;
                         background-color: transparent;
+                        @media (max-width: 1230px) {
+                          height: 50px;
+                          line-height: 50px;
+                        }
+                        &:hover {
+                            border-bottom: 3px solid $color-yellow;
+                        }
                     }
 
-                    &:hover {
-                        border-bottom: 3px solid $color-yellow;
-                    }
+
                 }
             }
         }
@@ -63,7 +91,8 @@
 
                 .uk-navbar-brand {
                     height: 60px;
-                    font-size: 14px;
+                    font-size: 10px;
+                    font-family: 'Graduate', cursive;
 
                     img {
                         height: 50px;
@@ -137,6 +166,11 @@
     // article
     .sg-articles {
         .uk-article {
+          .uk-article-title {
+            @media (max-width: $breakpoint-small-max) {
+                font-size: 24px;
+            }
+          }
             .article-img {
                 max-width: 100%;
                 height: auto;
@@ -200,16 +234,21 @@
             border: 20px solid $color-ft-bs;
 
             .header {
+              display: flex;
+                  align-items: center;
                 img {
                     width: 70px;
-                    float: left;
                     margin-right: 10px;
+                    height: 100%;
+                }
+                h2 {
+                  margin-top: 0;
                 }
             }
         }
 
         .mtv-braunschweig {
-            @media screen and (max-width: $breakpoint-medium) {
+            @media screen and (max-width: $breakpoint-small-max) {
                 margin-top: 40px;
             }
             padding: 10px;

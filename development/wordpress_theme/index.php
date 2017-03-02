@@ -6,8 +6,8 @@
       <!-- Sticky Posts -->
       <div class="sticky-posts uk-block">
         <div class="uk-grid">
-          <div class="uk-width-large-6-10 uk-container-center">
-            <div <?php if ( $number_of_posts > 1) echo 'class="uk-slidenav-position";' ?> data-uk-slideshow="{animation: 'swipe',autoplay:true,autoplayInterval:10000}">
+          <div class="uk-width-large-7-10 uk-container-center">
+            <div <?php if ( $number_of_posts > 1) echo 'class="uk-slidenav-position";' ?> data-uk-slideshow="{animation:'swipe',autoplay:true,autoplayInterval:10000}">
               <ul class="uk-slideshow">
                 <?php while ( $get_important_posts->have_posts() ) : $get_important_posts->the_post(); ?>
                   <li>
@@ -40,7 +40,7 @@
     <!-- blog posts -->
     <div class="sg-articles uk-block uk-text-justify">
       <div class="uk-grid">
-        <div class="uk-width-9-10 uk-width-large-6-10 uk-container-center">
+        <div class="uk-width-9-10 uk-width-large-7-10 uk-container-center">
           <?php
             if (have_posts()) : while (have_posts()) : the_post();
               get_template_part('content', get_post_format());
