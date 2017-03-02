@@ -29,10 +29,6 @@
               <?php if ( $number_of_posts > 1) { ?>
               <a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideshow-item="previous"></a>
               <a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next"></a>
-              <ul class="uk-dotnav uk-dotnav-contrast uk-position-bottom uk-flex-center">
-                  <li data-uk-slideshow-item="0"><a href=""></a></li>
-                  <li data-uk-slideshow-item="1"><a href=""></a></li>
-              </ul>
               <?php } ?>
             </div>
 
