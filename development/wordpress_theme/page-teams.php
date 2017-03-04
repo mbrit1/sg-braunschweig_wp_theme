@@ -6,7 +6,7 @@
     <div class="uk-block team-navigation">
       <h1>Bei uns gibt es folgende Bereiche:</h1>
       <div class="team-navigation-links uk-text-center uk-text-large">
-        <a href="#bundesliga-mannschaften">Bundesliga Mannschaften</a>, <a href="#jugendmannschaften">Jugendmannschaften</a>, <a href="#schulmannschaften">Schulemannschaften</a>, <a href="#seniorenmannschaften">Seniorenmannschaften</a>, <a href="#freizeitmannschaften">Freizeitmannschaften</a>
+        <a href="#bundesliga-mannschaften">Bundesliga Mannschaften</a>, <a href="#jugendmannschaften">Jugendmannschaften</a>, <a href="#schulmannschaften">Schulmannschaften</a>, <a href="#seniorenmannschaften">Seniorenmannschaften</a>, <a href="#freizeitmannschaften">Freizeitmannschaften</a>
       </div>
     </div>
     <h1 id="bundesliga-mannschaften">Bundesliga Mannschaften</h1>
