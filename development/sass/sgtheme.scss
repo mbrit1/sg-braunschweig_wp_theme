@@ -1,10 +1,26 @@
 .sg-theme {
     background-color: $color-grey;
     font-family: 'Open Sans', sans-serif;
+    width: 100%;
 
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Graduate', cursive;
-      text-align: left;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Graduate', cursive;
+        text-align: left;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+
+    article,
+    footer,
+    header,
+    nav,
+    section {
+        display: block;
     }
     // navigation
     .uk-navbar {
@@ -34,32 +50,31 @@
 
             .navbar-menu {
                 height: 100px;
-
                 @media (max-width: $breakpoint-medium-max) {
-                      max-width: 370px;
+                    max-width: 370px;
                 }
                 @media (min-width: $breakpoint-medium-max) and (max-width: 1230px) {
-                      max-width: 515px;
+                    max-width: 515px;
                 }
                 @media (min-width: $breakpoint-medium-max) {
-                  display: flex;
-                  align-items: center;
+                    display: flex;
+                    align-items: center;
                 }
             }
 
             .uk-navbar-nav {
                 @media (max-width: 1230px) {
-                  display: flex;
-                  flex-wrap: wrap;
-                  width: 100%;
-                  justify-content: flex-end;
-                  align-items: center;
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    justify-content: flex-end;
+                    align-items: center;
                 }
 
                 li {
                     &.current-menu-item {
                         a {
-                          border-bottom: 3px solid $color-yellow;
+                            border-bottom: 3px solid $color-yellow;
                         }
                     }
 
@@ -69,15 +84,14 @@
                         font-size: 1.4rem;
                         background-color: transparent;
                         @media (max-width: 1230px) {
-                          height: 50px;
-                          line-height: 50px;
+                            height: 50px;
+                            line-height: 50px;
                         }
+
                         &:hover {
                             border-bottom: 3px solid $color-yellow;
                         }
                     }
-
-
                 }
             }
         }
@@ -118,6 +132,14 @@
     }
     // main content
     .sticky-posts {
+        a {
+            color: $color-yellow;
+
+            &hover {
+                color: $color-yellow;
+                text-decoration: underline;
+            }
+        }
         @media (max-width: $breakpoint-large) {
             padding-top: 0;
         }
@@ -166,11 +188,12 @@
     // article
     .sg-articles {
         .uk-article {
-          .uk-article-title {
-            @media (max-width: $breakpoint-small-max) {
-                font-size: 24px;
+            .uk-article-title {
+                @media (max-width: $breakpoint-small-max) {
+                    font-size: 24px;
+                }
             }
-          }
+
             .article-img {
                 max-width: 100%;
                 height: auto;
@@ -178,11 +201,12 @@
                     max-height: 300px;
                 }
             }
+
             .content-single-img {
-              @media (max-width: $breakpoint-small-max) {
-                  margin-left: auto;
-                  margin-right: auto;
-              }
+                @media (max-width: $breakpoint-small-max) {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
             }
         }
     }
@@ -234,15 +258,17 @@
             border: 20px solid $color-ft-bs;
 
             .header {
-              display: flex;
-                  align-items: center;
+                display: flex;
+                align-items: center;
+
                 img {
                     width: 70px;
                     margin-right: 10px;
                     height: 100%;
                 }
+
                 h2 {
-                  margin-top: 0;
+                    margin-top: 0;
                 }
             }
         }
@@ -305,6 +331,16 @@
         background-color: $color-dark-blue;
 
         .footer-navigation {
+            @media screen and (max-width: $breakpoint-medium-max) {
+                &:not(:first-child) {
+                    margin-top: 15px;
+                }
+            }
+
+            a {
+                color: $color-yellow;
+            }
+
             ul:first-of-type {
                 padding-top: 15px;
             }
