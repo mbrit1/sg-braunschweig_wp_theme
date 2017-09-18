@@ -24,7 +24,7 @@
                       Kontakt
                   </div>
                   <ul>
-                    Am besten erreichst du uns über unser <a href="<?php echo get_page_link(141); ?>/#kontakt">Kontaktformular</a> oder direkt per Email unter <a href="mailto:geschaeftsstellt@sgbraunschweig.de">geschaeftsstellt@sgbraunschweig.de</a>.
+                    Am besten erreichst du uns über unser <a href="<?php echo get_page_link(141); ?>/#kontakt">Kontaktformular</a> oder direkt per Email unter <a href="mailto:geschaeftsstelle@sgbraunschweig.de">geschaeftsstelle@sgbraunschweig.de</a>.
                   </ul>
                 </li>
             </ul>
