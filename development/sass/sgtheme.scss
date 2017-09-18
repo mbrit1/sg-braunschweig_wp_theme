@@ -369,6 +369,21 @@
             color: #999;
         }
     }
+
+    // 404 page
+    .404-page {
+      .404-container {
+        padding: 30px;
+        background: $color-yellow;
+        background: linear-gradient(-90deg, $color-yellow-alt, $color-yellow);
+
+        .404-img, .404-text {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
 }
 
 .call-to-action-button {
